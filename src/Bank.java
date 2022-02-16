@@ -10,6 +10,15 @@ public class Bank
     private ArrayList<Account> accounts;
 
     /**
+     * Create a new Bank object with empty lists of users and accounts
+     * @param name the name of the Bank
+     */
+    public Bank(String name){
+        this.name = name;
+        this.users = new ArrayList<User>();
+        this.accounts = new ArrayList<Account>();
+    }
+    /**
      * Generate a new universally unique ID for a user.
      * @return  the uuid
      */
