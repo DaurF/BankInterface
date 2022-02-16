@@ -9,6 +9,13 @@ public class Account {
 
     private ArrayList<Transaction> transactions; // The list of transactions for this account
 
+    /**
+     * Create a new Account
+     * @param name  the name of the account
+     * @param holder    the User object that holds this account
+     * @param theBank   the bank that issues the account
+     */
+
     public Account(String name, User holder, Bank theBank)
     {
         // set the account name and holder

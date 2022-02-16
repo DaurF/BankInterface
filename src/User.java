@@ -6,7 +6,7 @@ public class User {
     private String lastName; // The Last Name
     private String uuid; // ID
     private byte pinHash[]; // User's pin number
-    private ArrayList<Account> accounts; // The list of accounts of the user
+    public ArrayList<Account> accounts; // The list of accounts of the user
 
     /**
      * Create a new user
@@ -40,5 +40,10 @@ public class User {
 
         // print log message
         System.out.println("New user %s, %s with ID %s created.\n", lastName, firstName, this.uuid);
+    }
+
+    public void addAccount(Account anAcct)
+    {
+        this.accounts.add(anAcct);
     }
 }
