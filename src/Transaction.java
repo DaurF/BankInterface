@@ -18,6 +18,5 @@ public class Transaction {
         this(amount, inAccount); //call two arg constructor first
         this.memo = memo; //set the memo
 
-
     }
 }
