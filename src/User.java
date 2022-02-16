@@ -42,8 +42,21 @@ public class User {
         System.out.println("New user %s, %s with ID %s created.\n", lastName, firstName, this.uuid);
     }
 
+    /**
+     * Add an account for the user
+     * @param anAcct    the account to add
+     */
     public void addAccount(Account anAcct)
     {
         this.accounts.add(anAcct);
+    }
+
+    /**
+     * Return the user's UUID
+     * @return  the uuid
+     */
+    public String getUUID()
+    {
+        return this.uuid;
     }
 }
