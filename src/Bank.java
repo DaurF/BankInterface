@@ -88,6 +88,14 @@ public class Bank
     };
 
     /**
+     * Add an account
+     * @param anAcct the account to add
+     */
+    public void addAccount(Account anAcct){
+        this.accounts.add(anAcct);
+    }
+
+    /**
      * Create a new user of the bank
      * @param firstName the user's first name
      * @param lastName  the user's last name
@@ -104,7 +112,7 @@ public class Bank
         // account lists
         Account newAccount = new Account("Savings", newUser, this);
         newUser.addAccount(newAccount);
-        this.accounts.add(newAccount);
+        this.addAccount(newAccount);
 
         return newUser;
     }
