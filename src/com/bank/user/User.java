@@ -1,12 +1,17 @@
+package com.bank.user;
+
+import com.bank.account.Account;
+import com.bank.bank.Bank;
+
 import java.security.NoSuchAlgorithmException;
 import java.util.ArrayList;
 import java.security.MessageDigest;
 
-public class  User {
+public class  User{
     private String firstName; // The First Name
     private String lastName; // The Last Name
     private String uuid; // ID
-    private byte pinHash[]; // User's pin number
+    private byte pinHash[]; // com.bank.user.User's pin number
     public ArrayList<Account> accounts; // The list of accounts of the user
 
     /**
@@ -63,7 +68,7 @@ public class  User {
     }
 
     /**
-     * Check whether a given pin matches the true User pin
+     * Check whether a given pin matches the true com.bank.user.User pin
      *
      * @param aPin the pin to check
      * @return whether the pin is valid or not

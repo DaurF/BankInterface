@@ -1,9 +1,15 @@
+package com.bank.atm;
+
+import com.bank.bank.Bank;
+import com.bank.user.User;
+import com.bank.account.Account;
+
 import java.util.Scanner;
 
 public class ATM {
     public static void main(String[] args) {
         Scanner sc = new Scanner(System.in);
-        Bank theBank = new Bank("Bank of Aitu");
+        Bank theBank = new Bank("com.bank.bank.Bank of Aitu");
         User aUser = theBank.addUser("Yertay", "Duisebayev", "1234"); // add a user and creates a savings account
         Account newAccount = new Account("Checking", aUser, theBank); // add a checking account for user
         aUser.addAccount(newAccount);
@@ -19,11 +25,11 @@ public class ATM {
     }
 
     /**
-     * Print the ATM's login menu
+     * Print the com.bank.atm.ATM's login menu
      *
-     * @param theBank the Bank object whose accounts to use
+     * @param theBank the com.bank.bank.Bank object whose accounts to use
      * @param sc      the Scanner object to use for user input
-     * @return the authenticated User object
+     * @return the authenticated com.bank.user.User object
      */
     public static User mainMenuPrompt(Bank theBank, Scanner sc) {
         String userID;
@@ -50,7 +56,7 @@ public class ATM {
     public static void printUserMenu(User theUser, Scanner sc) {
         theUser.printAccountsSummary(); // print a summary of user's accounts
         int choice;
-        //User menu
+        //com.bank.user.User menu
         do {
             System.out.printf("Welcome %s, What would you like to do?\n",
                     theUser.getFirstName());
@@ -92,7 +98,7 @@ public class ATM {
     /**
      * Show the transaction history for an account
      *
-     * @param theUser the logged-in User object
+     * @param theUser the logged-in com.bank.user.User object
      * @param sc      the Scanner object used for user input
      */
     public static void showTransHistory(User theUser, Scanner sc) {
@@ -154,7 +160,7 @@ public class ATM {
 
     /**
      * Process a fund withdraw from account
-     * @param theUser the logged-in User object
+     * @param theUser the logged-in com.bank.user.User object
      * @param sc the Scanner object used for user input
      */
     public static void withdrawFunds(User theUser, Scanner sc) {
@@ -193,7 +199,7 @@ public class ATM {
 
     /**
      * Process a fund deposit from account
-     * @param theUser the logged-in User object
+     * @param theUser the logged-in com.bank.user.User object
      * @param sc the Scanner object used for user input
      */
     public static void depositFunds(User theUser, Scanner sc) {

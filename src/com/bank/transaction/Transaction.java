@@ -1,11 +1,15 @@
+package com.bank.transaction;
+
+import com.bank.account.Account;
+
 import java.util.Date;
 
-public class Transaction {
+public class Transaction{
 
     private double amount; //Amount of this transaction
     private Date timestamp; // Time and date of this transaction
     private String memo; //Memo for this transaction
-    private Account inAccount; //Account in which the transaction was performed
+    private Account inAccount; //com.bank.account.Account in which the transaction was performed
 
     /**
      *

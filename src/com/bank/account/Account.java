@@ -1,18 +1,24 @@
+package com.bank.account;
+
+import com.bank.bank.Bank;
+import com.bank.transaction.Transaction;
+import com.bank.user.User;
+
 import java.util.ArrayList;
 
-public class Account {
+public class Account implements IAccount {
     private String name; // Name of account
 
-    private String uuid; // Account ID Number
+    private String uuid; // com.bank.account.Account ID Number
 
-    private User holder; // User that owns this account
+    private User holder; // com.bank.user.User that owns this account
 
     private ArrayList<Transaction> transactions; // The list of transactions for this account
 
     /**
-     * Create a new Account
+     * Create a new com.bank.account.Account
      * @param name  the name of the account
-     * @param holder    the User object that holds this account
+     * @param holder    the com.bank.user.User object that holds this account
      * @param theBank   the bank that issues the account
      */
 
@@ -36,6 +42,7 @@ public class Account {
      * Get the account ID
      * @return the uuid
      */
+    @Override
     public String getUUID()
     {
         return this.uuid;
@@ -45,6 +52,7 @@ public class Account {
      *  Get summary line for the account
      * @return  the string summary
      */
+    @Override
     public String getSummaryLine()
     {
         // get the account's balance
@@ -64,6 +72,7 @@ public class Account {
      * Get the balance of this account by adding the amounts of the transactions
      * @return  the balance value
      */
+    @Override
     public double getBalance()
     {
         double balance = 0;
@@ -78,9 +87,10 @@ public class Account {
     /**
      * Print the transaction history of the account
      */
+    @Override
     public void printTransHistory()
     {
-        System.out.printf("\nTransaction history for account %s\n", this.uuid);
+        System.out.printf("\ncom.bank.transaction.Transaction history for account %s\n", this.uuid);
         for(int t = this.transactions.size()-1; t >= 0; t--)
         {
             System.out.println(this.transactions.get(t).getSummaryLine());
@@ -93,6 +103,7 @@ public class Account {
      * @param amount    the amount transacted
      * @param memo      the transaction memo
      */
+    @Override
     public void addTransaction(double amount, String memo)
     {
         // create new transaction object and add it to our list
