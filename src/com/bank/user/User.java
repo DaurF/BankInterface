@@ -7,7 +7,7 @@ import java.security.NoSuchAlgorithmException;
 import java.util.ArrayList;
 import java.security.MessageDigest;
 
-public class  User{
+public class User implements IUser{
     private String firstName; // The First Name
     private String lastName; // The Last Name
     private String uuid; // ID

@@ -4,7 +4,7 @@ import com.bank.account.Account;
 
 import java.util.Date;
 
-public class Transaction{
+public class Transaction implements ITransaction {
 
     private double amount; //Amount of this transaction
     private Date timestamp; // Time and date of this transaction
